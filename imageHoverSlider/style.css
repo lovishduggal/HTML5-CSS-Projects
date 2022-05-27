@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background: rgb(24, 59, 73);
+}
+.box {
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -250px;
+  text-align: center;
+  overflow: hidden;
+}
+.box img {
+  width: 100%;
+  height: 100%;
+}
+.content {
+  background: rgba(4, 61, 84, 0.9);
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  padding: 5rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: lightgray;
+  transition: all 1s ease-in-out;
+  text-align: start;
+}
+.box:hover .content {
+  left: 0%;
+  top: 0;
+}
+.content h3 {
+  margin-bottom: 2rem;
+}
+.content p {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 3rem;
+}
+.content .socials {
+  text-align: center;
+  padding: 2.5rem 0;
+  text-align: end;
+}
+.content .socials a {
+  display: inline-block;
+  color: lightgray;
+  padding: 0 0.5rem;
+  font-size: 2rem;
+}
+.door-1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background: linear-gradient(to right, rgb(0, 172, 240), rgb(165, 224, 248));
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.box:hover .door-1 {
+  top: 0;
+  left: 100%;
+}
+.door-2 a {
+  top: 50%;
+  left: 90%;
+  position: absolute;
+  color: rgb(4, 61, 84);
+  font-size: 2rem;
+}
+.door-2 {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  background: linear-gradient(to left, rgb(0, 172, 240), rgb(165, 224, 248));
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  border-right: 2px solid black;
+}
+.box:hover .door-2 {
+  top: 0;
+  left: -100%;
+  border-right: 2px solid transparent;
+  opacity: 0;
+}
+.door-2 .open {
+  top: 50%;
+  left: 90%;
+  position: absolute;
+  color: rgb(4, 61, 84);
+  font-size: 2rem;
+  opacity: 0;
+}
+.box:hover .door-2 .open {
+  opacity: 1;
+}
+.box:hover .door-2 a {
+  opacity: 0;
+}
